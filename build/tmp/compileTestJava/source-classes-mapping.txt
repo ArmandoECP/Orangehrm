@@ -1,0 +1,10 @@
+pageObjects/pagDashboard.java
+ pageObjects.pagDashboard
+pageObjects/paguinalogueo.java
+ pageObjects.paguinalogueo
+configuraciones/drivers.java
+ configuraciones.drivers
+test/testLogueo.java
+ test.testLogueo
+pageObjects/pagAdmin.java
+ pageObjects.pagAdmin
