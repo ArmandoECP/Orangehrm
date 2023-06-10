@@ -40,19 +40,25 @@ public class pagAdmin {
     }
     public void tablita(WebElement tabla){
         //private ArrayList<tabla>
-        //WebElement tabla=driverl.findElement(By.cssSelector("div[class='oxd-table']"));
+        WebElement tabla1=driverl.findElement(By.className("orangehrm-container"));
         wait.until(ExpectedConditions.visibilityOf(tabla));
-        List<WebElement> filas=tabla.findElements(By.cssSelector("div[class='oxd-table-body']"));
+        //List<WebElement> filas=tabla.findElements(By.cssSelector("div[class='oxd-table-body']"));
+
+
+
+
+        List<WebElement> filas=tabla1.findElements(By.className("oxd-table-body"));
         System.out.println("ya entre al proceso de la tabla");
-        System.out.println(filas);
+        System.out.println("la fila  "+filas.size());
         int indexfil=0;
         for (WebElement f: filas) {
             System.out.println("ya entre a cada fila");
-            List<WebElement> columna=f.findElements(By.cssSelector("div[class='oxd-table-card']"));
+            List<WebElement> columna=f.findElements(By.className("oxd-table-card"));
             int indexcol=0;
+            System.out.println("numero de filas "+ f.getSize());
             for (WebElement d: columna) {
                 System.out.println("ya entre a cada columna");
-                WebElement dato=d.findElement(By.cssSelector("div[class='oxd-table-cell oxd-padding-cell']"));
+                WebElement dato=d.findElement(By.className("oxd-table-cell oxd-padding-cell"));
                 System.out.println(dato.getText());
                 indexcol++;
 
